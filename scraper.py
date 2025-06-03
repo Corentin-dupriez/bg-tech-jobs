@@ -20,6 +20,12 @@ def find_categories(soup: BeautifulSoup) -> dict[str, str]:
             child_info = child.text.split()
             data[''.join(child_info[0:-1])] = child_info[-1]
 
+    junior, management = soup.find_all(class_='title-count-wrap')
+    junior = junior.text.split()[-1]
+    management = management.text.split()[-1]
+    data['Junior'] = junior
+    data['ITManagement'] = management
+
     return data
 
 def order_data(data: dict) -> dict[str, int]:
@@ -55,8 +61,6 @@ def order_data(data: dict) -> dict[str, int]:
         'mobile': data['MobileDevelopment'],
         'ios': data['iOS'],
         'android': data['Android'],
-        #'itmanagement': data['ITManagement'],
-        #'junior': data['Junior'],
+        'itmanagement': data['ITManagement'],
+        'junior': data['Junior'],
     }
-
-
