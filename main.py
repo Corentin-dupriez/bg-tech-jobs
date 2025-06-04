@@ -1,5 +1,5 @@
-from scraper import request_to_dev_bg, find_categories, order_data
-from csv_update import write_new_line
+from scraper.scraper import request_to_dev_bg, find_categories, order_data
+from update_csv_data.csv_update import write_new_line
 
 def main():
     print('Starting scraping...')
