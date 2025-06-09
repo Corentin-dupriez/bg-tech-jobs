@@ -24,17 +24,29 @@ The goal of this project is to:
 
 ## Project structure 
 bg-tech-jobs/
+
 ├── .github/workflows       # Automation scripts
+
 ├── data/                   # Collected job listing CSV files
+
 ├── notebooks/              # Jupyter notebooks for analysis
+
 │   └── BG_Tech_Jobs_Analysis.ipynb
+
 ├── scraper/                # Web scraping script
+
 │   └── job_scraper.py
+
 ├── update_csv_data/                  # Module to update the csv file
+
 │   └── csv_update.py
+
 ├── main.py          # Entry point script to run scraper and update the csv
+
 ├── requirements.txt        # Python dependencies
+
 ├── .gitignore              # Ignored files and folders
+
 └── README.md               # Project documentation
 
 ## How to use
